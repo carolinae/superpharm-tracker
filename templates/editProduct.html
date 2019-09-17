@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block content %}
-    <form method="POST" action="http://localhost:5000/send_data">
+    <form method="POST" action="/send_data">
         <input type="hidden" name="id" value="{{ product.id }}">
         <table>
             <tr>
