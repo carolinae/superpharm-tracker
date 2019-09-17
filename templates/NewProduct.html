@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block content %}
+    <form method="POST" action="http://localhost:5000/send_data">
+        <table class="form_table">
+            <tr>
+                <td>Product's Name:</td>
+                <td> <input name="product_name" type="text"></td>
+            </tr>
+
+            <tr>
+                <td> URL:</td>
+                <td>  <input name="url" type="url"></td>
+            </tr>
+
+            <tr>
+                <td>Desired Price:</td>
+                <td> <input name="desired_price" type="text"></td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center"><input class="button" type="submit" value="send please"></td>
+            </tr>
+
+        </table>
+
+    </form>
+
+{% endblock content %}
