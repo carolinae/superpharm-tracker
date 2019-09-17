@@ -1,5 +1,5 @@
 body {
-	background-color: peachPuff;
+	background-color: Azure ;
 	font-family: "Courier New", Courier, monospace;
 }
 
@@ -10,12 +10,14 @@ body {
 }
 
 .menu tr td {
+    font-weight: bold;
+    font-size: 14pt;
 	line-height: 0.8;
 	height: 30px;
 	width: 150px;
 	margin: 0 auto;
 	border: 5px solid #000000;
-	background-color: White;
+	background-color: white;
 }
 
 .menu tr td a:link,
@@ -46,12 +48,16 @@ a:active {
 }
 
 .products {
-	background-color: white;
 	border-color: black;
+	background-color: white;
 }
 
 .products tr:nth-child(n+2) td {
 	border-top: 10px black solid;
+}
+
+.product-info tr td {
+    border:0px !important;
 }
 
 .form_table {
@@ -72,7 +78,13 @@ a:active {
 	cursor: pointer;
 }
 
-h1 {
+.titles {
 	color: black;
-	text-shadow: 2px 2px 4px #000000;
+	text-shadow: 1px 1px 2px #000000;
+	font-size:18pt;
+	font-weight:bold;
+}
+.properties {
+    font-size:16pt;
+    font-weight:bold;
 }

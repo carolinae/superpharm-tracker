@@ -1,15 +1,26 @@
 {% extends "layout.html" %}
 {% block content %}
-    <table class="products" border="10" cellspacing="0" cellpadding="0" align="center" width="600">
+    <table class="products" border="2" cellspacing="0" cellpadding="0" align="center" width="600">
         {% for product in products %}
          <tr>
             <td>
                 <a href="/delete/{{ product.id }}"> <img src ="/images/x.png" height="20" style="float:right; margin-right:10px; margin-top:10px;"></a>
-                <a href="/editProduct/{{ product.id }}"> <img src="/images/edit.jpg" height="20" style="float:right; margin-right:10px; margin-top:10px;"></a>
-                <h1><b>Product: </b>{{ product.product_name }} </h1>
-                <h1>Desired price: {{ product.desired_price }}</h1>
-                <h1>current price: {{ product.current_price }}</h1>
-                <h1> <img src="{{product.current_picture}}" height="150" style="float:right; margin-right:10px; margin-bottom:10px;"></h1>
+                <a href="/editProduct/{{ product.id }}"> <img src="/images/edit.jpg" height="20" style="float:right; margin-right:10px; margin-top:10px;"></a> <br>
+                <table class="product-info">
+                    <tr>
+                        <td><span class="titles">Product</span></td>
+                        <td><span class="properties">: {{ product.product_name }}</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="titles">Desired price</span></td>
+                        <td><span class="properties">: {{ product.desired_price }}</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="titles">Current price</span></td>
+                        <td><span class="properties">: {{ product.current_price }}</span></td>
+                    </tr>
+                </table>
+                <img src="{{product.current_picture}}" height="150" style="float:right; margin-right:10px; margin-bottom:10px;"> <br>
             </td>
          </tr>
         {% endfor %}

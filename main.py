@@ -4,9 +4,11 @@ import uuid
 
 
 app = Flask(__name__, static_url_path='', static_folder='static')
-products=[]
+products = []
+
 
 @app.route('/HomePage')
+@app.route('/')
 def HomePage():
     global products
     f = open('products.txt', "r")
@@ -14,9 +16,11 @@ def HomePage():
     f.close()
     return render_template('HomePage.html', products=products)
 
+
 @app.route('/NewProduct')
 def NewProduct():
     return render_template('NewProduct.html')
+
 
 @app.route('/About')
 def About():
